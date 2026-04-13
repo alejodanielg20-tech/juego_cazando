@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cazando.css">
   <title>Juego Cazando</title>
-
 </head>
-<body>
+<body onload="iniciarJuego();">
 
   <h1>Juego Cazando</h1>
-  <p>Autor: Tu Nombre o Nickname</p>
+  <p class="autor">Autor: Alejandro Salazar</p>
 
+  <canvas id="areaJuego" width="500" height="500"></canvas>
 
   <div class="controles">
-    <button>⬆</button>
-    <br>
-    <button>⬅</button>
-    <button>⬇</button>
-    <button>➡</button>
+    <div class="fila">
+      <button>↑</button>
+    </div>
+    <div class="fila">
+      <button>←</button>
+      <button>↓</button>
+      <button>→</button>
+    </div>
   </div>
-
 
   <div class="panel">
     <span>Puntos: <span id="puntos">0</span></span>
@@ -26,6 +31,6 @@
 
   <p id="mensaje"></p>
 
-
+  <script src="cazando.js"></script>
 </body>
 </html>

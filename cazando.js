@@ -6,8 +6,10 @@ let gatoY = 0;
 let comidaX = 0;
 let comidaY = 0;
 let puntos = 0;
-let tiempo = 15;
+let tiempoMaximo = 15;
+let tiempo = tiempoMaximo;
 let intervalo;
+
 
 const ANCHO_GATO = 60;
 const ALTO_GATO = 60;
@@ -73,7 +75,8 @@ function moverGato(direccion) {   // ✅ corregido
 
   if (verificarColision()) {
     puntos++;
-    tiempo = 15;
+    tiempoMaximo--;
+    tiempo = tiempoMaximo;
     comidaX = posicionAleatoria(canvas.width, ANCHO_COMIDA);
     comidaY = posicionAleatoria(canvas.height, ALTO_COMIDA);
     limpiarCanvas();

@@ -1,6 +1,10 @@
 const canvas = document.getElementById("areaJuego");
 const ctx = canvas.getContext("2d");
 
+const imgGato = new Image();
+imgGato.src = "gato.png";
+
+
 let gatoX = 0;
 let gatoY = 0;
 let comidaX = 0;
@@ -23,8 +27,8 @@ function graficarRectangulo(x, y, ancho, alto, color) {
 }
 
 function graficarGato() {
-  graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#8B00FF");
-}
+  ctx.drawImage(imgGato, gatoX, gatoY, ANCHO_GATO, ALTO_GATO);
+} 
 
 function graficarComida() {
   graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#00BFFF");
